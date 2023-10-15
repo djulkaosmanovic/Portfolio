@@ -1,11 +1,11 @@
 :root {
-    --clr-primary: black;
-    --clr-neutral: white;
+    --clr-primary: rgb(245, 243, 243);
+    --clr-neutral: rgb(34, 31, 31);
     --clr-accent: yellow;
 
-    --ff-primary: ;
+    --ff-primary: font-family: 'Roboto', sans-serif;;
     --ff-body: var(--ff-primary);
-    --ff-accent: ;
+    --ff-accent: font-family: 'Dancing Script', cursive, 'Fira Mono', monospace;
 
     --fw-regular: 400;
     --fw-semi-bold: 500;
@@ -120,6 +120,18 @@ select {
     color: var(--clr-accent);
 }
 
+.bg-primary {
+    background-color: var(--clr-primary);
+}
+
+.bg-neutral {
+    background-color: var(--clr-neutral);
+}
+
+.bg-accent {
+    background-color: var(--clr-accent);
+}
+
 .fw-bold {
     font-weight: var(--fw-bold);
 }
@@ -140,18 +152,167 @@ select {
     font-size: var(--fs-secondary-heading);
 }
 
-.fs-body {
-    font-size: var(--fs-body);
+/*
+span::before { 
+    content: "Đulka Osmanović.";
+    font-family: var(--ff-accent); 
+    animation: animate infinite 8s;
+    padding-left: 12px; 
+} 
+
+@keyframes animate { 
+
+    0% { 
+        content: "Đulka Osmanović."; 
+    } 
+
+    50% { 
+        content: "a student."; 
+    } 
+
+    65% { 
+        content: "a programmer."; 
+    } 
+} 
+*/
+/*
+span{
+    animation: glitch 1s linear infinite;
 }
-
-.fs-button {
-    font-size: var(--fs-button);
+  
+@keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+span:before,
+span:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+span:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
-
-.fs-nav {
-    font-size: var(--fs-nav);
+  
+@keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
 }
+  
+span:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+@keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
+  
+*/
 
 
 
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+body{ 
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #131313;
+    color: #fff;
+
+    font-family: 'Fira Mono', monospace;
+
+  }
+  
+span{
+    animation: glitch 1s linear infinite;
+  }
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  span:before,
+  span:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  span:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  span:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
+  
+  
 
